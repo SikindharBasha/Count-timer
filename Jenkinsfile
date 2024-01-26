@@ -14,5 +14,13 @@ tools{
                 sh 'mvn clean install'
             }
         }
+         stage('Docker Image') {
+            steps {
+                
+                sh 'docker build -t Sikiimage .'
+                sh 'ls -l'
+                sh 'pwd'
+            }
+        }
     }
 }
